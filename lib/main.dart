@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tokme/constant/colors.dart';
 import 'package:tokme/views/screens/auth/login_screen.dart';
+import 'package:tokme/views/screens/auth/registration_sereen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // scaffoldBackgroundColor: backgroundColor,
       ),
-      home:LoginScreen(),
+      home:SignUp(),
     );
   }
 }

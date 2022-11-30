@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tokme/constant/colors.dart';
 import 'package:tokme/wedgets/text_input_fields.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({Key? key}) : super(key: key);
+import '../../../constant/colors.dart';
 
-  final TextEditingController _emailController = TextEditingController();
+class SignUp extends StatelessWidget {
+  SignUp({Key? key}) : super(key: key);
+
+  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           const Text(
-            'Login',
+            'Register',
             style: TextStyle(
               fontSize: 25.0,
               color: Colors.black,
@@ -34,6 +36,41 @@ class LoginScreen extends StatelessWidget {
           ),
           const SizedBox(
             height: 25.0,
+          ),
+          Stack(
+            children: [
+              const CircleAvatar(
+                radius: 64.0,
+                backgroundImage: NetworkImage(
+                    'https://www.shutterstock.com/image-vector/user-avatar-icon-sign-profile-260nw-1145752283.jpg'),
+                backgroundColor: Colors.black,
+              ),
+              Positioned(
+                bottom: -10.0,
+                left: 88.0,
+                child: IconButton(
+                  onPressed: () {
+                    print('Icon pressed');
+                  },
+                  icon: const Icon(Icons.add_a_photo),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 25.0,
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            margin: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: TextInputFields(
+              controller: _nameController,
+              lableText: 'Name',
+              icon: Icons.person,
+            ),
+          ),
+          const SizedBox(
+            height: 15.0,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
@@ -45,7 +82,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 25.0,
+            height: 15.0,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
@@ -56,8 +93,8 @@ class LoginScreen extends StatelessWidget {
               icon: Icons.lock,
             ),
           ),
-          SizedBox(
-            height: 30.0,
+          const SizedBox(
+            height: 25.0,
           ),
           Container(
             width: MediaQuery.of(context).size.width - 40.0,
@@ -70,11 +107,11 @@ class LoginScreen extends StatelessWidget {
             ),
             child: InkWell(
               onTap: () {
-                print('User Login');
+                print('User Register');
               },
               child: const Center(
                 child: Text(
-                  'Login',
+                  'Register',
                   style: TextStyle(
                     fontSize: 25.0,
                     color: Colors.white,
@@ -91,7 +128,7 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                'Don\'t have an account?',
+                'Already have an account?',
                 style: TextStyle(
                   fontSize: 20.0,
                 ),
@@ -104,10 +141,10 @@ class LoginScreen extends StatelessWidget {
                   print('Go To Registration Page');
                 },
                 child: Text(
-                  'Register',
+                  'Log In',
                   style: TextStyle(
-                      fontSize: 20.0,
-                      color: buttonColor,
+                    fontSize: 20.0,
+                    color: buttonColor,
                   ),
                 ),
               ),
