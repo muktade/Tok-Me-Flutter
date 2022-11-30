@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "140467430125",
+    "project_id": "tokme-9b1a7",
+    "storage_bucket": "tokme-9b1a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140467430125:android:807bbc262fb059e925e2e4",
+        "android_client_info": {
+          "package_name": "com.example.tokme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140467430125-nieimhp2l1ikd02kvpknr00a11b0kkhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPeAuCcAcOBVXLTSseRscJXOORigfJ3Mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140467430125-nieimhp2l1ikd02kvpknr00a11b0kkhq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
